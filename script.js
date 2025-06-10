@@ -55,17 +55,23 @@ buttons.forEach(button => {
 
 
 // === Module: Evaluate the Full Expression ===   soknea1 (feature)
+
+
+// === Module: Evaluate the Full Expression ===   Hong (Hotfix track on soknea1)
+
+
 function evaluateExpression() {
-   try {
-     const result = eval(expression);
-     resultEl.textContent = result;
-     expressionEl.textContent = expression;
-     expression = result.toString();
-   }
-   catch {
-  
-   }
+  try {
+    const result = eval(expression);
+    resultEl.textContent = result;
+    expressionEl.textContent = expression;
+    expression = result.toString();
+  }
+  catch {
+    resultEl.textContent = "Error"; 
+  }
 }
+
 
 
 // === Module: Toggle Negative === soknea2 (feature)
