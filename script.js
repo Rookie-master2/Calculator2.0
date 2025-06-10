@@ -4,7 +4,6 @@ const resultEl = document.querySelector(".result");
 const buttons = document.querySelectorAll("button");
 let expression = "";
 
-
 // === Module: Event Listener for Buttons ===  Rith (Track Feature from Rida1)
 buttons.forEach(button => {
  button.addEventListener("click", () => {
@@ -80,9 +79,6 @@ function toggleNegative() {
    }
 }
 
-
-
-
 // === Module: Apply Percentage ===   channy (feature)
 function applyPercentage() {
    const match = expression.match(/(\d+\.?\d*)$/);
@@ -93,9 +89,6 @@ function applyPercentage() {
      updateDisplay();
    }
  }
-
-
-
 
 // === Module: Append Button Value to Expression ++  ===  rida2 (feature)
 function appendToExpression(value) {
@@ -122,17 +115,11 @@ function handleSquareRoot() {
  }
 }
 
-
-
-
 // === Module: Exponentiation ^ === Phal (feature)
 function handleExponent() {
  expression += "**";
  updateDisplay();
 }
-
-
-
 
 // === Module: Clear All ===   channin (feature)
 function clearExpression() {
