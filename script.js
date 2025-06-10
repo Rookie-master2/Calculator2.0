@@ -126,3 +126,10 @@ function clearExpression() {
  expression = "";
  updateDisplay();
 }
+
+// === Module: Backspace Last Character === Phal create branch and channin (track bugfix)
+function backspace() {
+    expression = expression.slice(0, -1);
+    updateDisplay();
+   }
+   
