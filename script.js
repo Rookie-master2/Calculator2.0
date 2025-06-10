@@ -22,6 +22,11 @@ function toggleNegative() {
      updateDisplay();
    }
 }
+// === Module: Clear All ===   channin (feature)
+function clearExpression() {
+ expression = "";
+ updateDisplay();
+}
 // === Module: Apply Percentage ===   channy (feature)
 function applyPercentage() {
     const match = expression.match(/(\d+\.?\d*)$/);
