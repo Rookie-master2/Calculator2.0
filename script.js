@@ -126,6 +126,3 @@ function clearExpression() {
  expression = "";
  updateDisplay();
 }
-
-
-// hello
