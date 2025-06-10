@@ -54,9 +54,6 @@ buttons.forEach(button => {
 });
 
 
-// === Module: Evaluate the Full Expression ===   soknea1 (feature)
-
-
 // === Module: Evaluate the Full Expression ===   Hong (Hotfix track on soknea1)
 
 
@@ -96,11 +93,22 @@ function applyPercentage() {
    }
  }
 
-// === Module: Append Button Value to Expression ++  ===  rida2 (feature)
-function appendToExpression(value) {
- expression += value;
- updateDisplay();
-}
+// channy  (Hotfix on rida2)
+function appendToExpression(value) { 
+    const lastNumberMatch = expression.match(/(\d+\.?\d*)$/);
+    if (value === "0" && lastNumberMatch && lastNumberMatch[1] === "0") {
+      return;
+    }
+    if (value === "0" && /[\+\-\*\/\(\)]0$/.test(expression)) {
+      return;
+    }
+    if (/^0$/.test(expression) && value !== ".") {
+      expression = value;
+    } else {
+      expression += value;
+    }
+    updateDisplay();
+  }
 
 
 // === Module: Update UI Display ===   Thida (feature track from rida)
@@ -132,3 +140,6 @@ function clearExpression() {
  expression = "";
  updateDisplay();
 }
+
+
+
