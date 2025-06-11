@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // === Module: Evaluate the Full Expression ===   soknea1 (feature)
 function evaluateExpression() {
    try {
@@ -22,10 +21,8 @@ function toggleNegative() {
      expression = expression.replace(/(\-?\d+\.?\d*)$/, toggled.toString());
      updateDisplay();
    }
-=======
 // === Module: Clear All ===   channin (feature)
 function clearExpression() {
  expression = "";
  updateDisplay();
->>>>>>> feature/issue_#9
 }
