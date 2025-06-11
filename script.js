@@ -141,5 +141,10 @@ function clearExpression() {
  updateDisplay();
 }
 
+function backspace() {
+  expression = expression.slice(0, -1);
+  updateDisplay();
+ }
+ 
 
 
